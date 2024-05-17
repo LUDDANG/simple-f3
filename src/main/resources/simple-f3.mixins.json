@@ -1,0 +1,7 @@
+{
+  "package": "kr.enak.minecraft.mods.fabric.simplef3.mixins",
+  "client": [
+    "MixinDebugScreen",
+    "MixinGameMenu"
+  ]
+}

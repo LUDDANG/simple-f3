@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "simple-f3",
+  "version": "${version}",
+  "name": "SimpleF3",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/LUDDANG/SimpleF3"
+  },
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "mixins": [
+    "simple-f3.mixins.json"
+  ],
+  "entrypoints": {
+    "client": [
+      "kr.enak.minecraft.mods.fabric.simplef3.client.SimpleF3Client"
+    ],
+    "main": [
+      "kr.enak.minecraft.mods.fabric.simplef3.SimpleF3"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
