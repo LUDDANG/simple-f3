@@ -27,10 +27,24 @@ public abstract class MixinDebugScreen {
         List<String> output = new ArrayList<>(cir.getReturnValue());
         List<String> whitelist = List.of(
                 "XYZ:",
-                "Biome:"
+                "Biome:",
+                "Facing:"
         );
 
         output.removeIf(str -> whitelist.stream().noneMatch(str::startsWith));
+
+        for (int i = 0; i < output.size(); i++) {
+            String str = output.get(i);
+
+            if (str.startsWith("Facing:")) {
+                output.set(i,
+                        (str.substring(0, str.indexOf(") (")) + ")")
+                                .replace("Towards ", "")
+                                .replace("positive ", "+")
+                                .replace("negative ", "-")
+                );
+            }
+        }
 
         cir.setReturnValue(output);
     }
