@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "SimpleF3",
   "description": "",
-  "authors": [],
+  "authors": ["EunhakLee(return0927)"],
   "contact": {
     "repo": "https://github.com/LUDDANG/SimpleF3"
   },
